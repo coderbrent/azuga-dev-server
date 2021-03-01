@@ -7,8 +7,8 @@ const API_KEY = "YWY5M2M2MTQtYjExYi00YWZkLTlhOWItM2E5NzVlY2IzNGVl"
 
 app.use(express.json());
 
-app.get('/azuga-data', (req, res) => {
-  axios({
+app.get('/azuga-data', async (req, res) => {
+  await axios({
     method: 'get',
     url: AZUGA_URL,
     headers: {
